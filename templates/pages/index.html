@@ -1,0 +1,123 @@
+{% extends "layouts/base.html" %}
+
+{% block menu %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container d-flex align-items-center">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="oi oi-menu"></span> Menu
+	    </button>
+	      <p class="button-custom order-lg-last mb-0"><a href="{% url 'rdv' %}" class="btn btn-secondary py-2 px-3">Prendre un rendez-vous</a></p>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a href="{% url 'indexprojet' %}" class="nav-link pl-0">Accueil</a></li>
+				<li class="nav-item"><a href="{% url 'indexservice' %}" class="nav-link"> nos Services</a></li>
+	        	<li class="nav-item"><a href="{% url 'indexpersonnel' %}" class="nav-link">Personnel soigant</a></li>
+	        	<li class="nav-item"><a href="{% url 'apropos' %}" class="nav-link">à propos de l'hopital</a></li>
+                <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+    </nav>
+{% endblock%}
+
+{% block Accueil %}
+<section class="home-slider owl-carousel">
+  <div class="slider-item" style="background-image:url(/static/images/acc1.png);" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+      <div class="col-md-6 text ftco-animate">
+        <h1 class="mb-4">Rendre <span>Votre séjour heureux</span></h1>
+        <h3 class="subheading">Chaque jour, nous apportons espoir et sourire au patient que nous servons.</h3>
+        <p><a href="{% url 'rdv' %}" class="btn btn-secondary px-4 py-3 mt-3">Prendre un rendez-vous</a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="slider-item" style="background-image:url(/static/images/acc2.jpg);">
+      <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+      <div class="col-md-6 text ftco-animate">
+        <h1 class="mb-4">Nous prenons <span>soin de votre santé</span></h1>
+        <h3 class="subheading">Votre santé est notre priorité absolue avec des soins médicaux complets et abordables.</h3>
+        <p><a href="{% url 'rdv' %}" class="btn btn-secondary px-4 py-3 mt-3"> Prendre un rendez-vous</a></p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-services ftco-no-pb">
+        <div class="container">
+            <div class="row no-gutters">
+      <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+        <div class="media block-6 d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+                <span class="flaticon-doctor"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">Médecins Qualifiés</h3>
+            <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+        <div class="media block-6 d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+                <span class="flaticon-ambulance"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">Soins d'Urgence</h3>
+            <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+          </div>
+        </div>    
+      </div>
+      <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+        <div class="media block-6 d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+                <span class="flaticon-stethoscope"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">Diagnostic</h3>
+            <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-3 d-flex services align-self-stretch p-4 ftco-animate">
+        <div class="media block-6 d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center">
+                <span class="flaticon-24-hours"></span>
+          </div>
+          <div class="media-body p-2 mt-3">
+            <h3 class="heading">A votre disposition 24/24</h3>
+            <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+          </div>
+        </div>      
+      </div>
+    </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="ftco-intro" style="background-image: url(/static/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <!--<div class="row">
+                <div class="col-md-9">
+                    <h2>We Provide Free Health Care Consultation</h2>
+                    <p class="mb-0">Your Health is Our Top Priority with Comprehensive, Affordable medical.</p>
+                    <p></p>
+                </div>
+                <div class="col-md-3 d-flex align-items-center">
+                    <p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">Free Consutation</a></p>
+                </div>
+            </div>-->
+        </div>
+</section>
+{% endblock %}
+
+
+

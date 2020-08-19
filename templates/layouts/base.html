@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Soleildev</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+    
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!---icones-------------------------------------------------------------------------------------->
+    <link  rel = "apple-touch-icon"  tailles = "57x57"  href = "{% static 'images/icones/apple-icon-57x57.png' %}" > 
+    <link  rel = "apple-touch-icon"  tailles = "60x60"  href = "{% static 'images/icones/apple-icon-60x60.png' %} " > 
+    <link  rel = "apple-touch-icon"  tailles = "72x72"  href = "{% static 'images/icones/apple-icon-72x72.png " > 
+    <link  rel = "apple-touch-icon"  tailles = "76x76"  href = "{% static 'images/icones/apple-icon-76x76.png' %}" > 
+    <link  rel = "apple-touch-icon"  tailles = "114x114"  href = "{% static 'images/icones/apple-icon-114x114.png' %}"> 
+    <link  rel = "apple-touch-icon"  tailles = "120x120"  href = "{% static 'images/icones/apple-icon-120x120.png' %}" > 
+    <link  rel = "apple-touch-icon"  tailles = "144x144"  href = "{% static 'images/icones/ apple-icon-144x144.png' %}" > 
+    <link  rel = "apple-touch-icon"  tailles = "152x152"  href = "{% static 'images/icones/apple-icon-152x152.png' %}" > 
+    <link  rel = "apple-touch-icon"  tailles = "180x180"  href = "{% static 'images/icones/apple-icon-180x180.png' %}" > 
+    <link  rel = "icon"  type = "image/png"  tailles = "192x192"  href = "{% static 'images/icones/android-icon-192x192.png' %}" > 
+    <link  rel = "icon"  type = "image/png"  tailles = "32x32"  href = "{% static 'images/icones/favicon-32x32.png' %}" > 
+    <link  rel = "icon"  type = "image/png"  tailles = "96x96"  href = "{% static 'images/icones/favicon-96x96.png' %}" > 
+    <link  rel = "icon"  type = "image/png"  tailles = "16x16"  href = "{% static 'images/icones/ favicon-16x16.png' %}" > 
+    <link  rel = "manifest" href = "{% static 'images/icones/manifest.json' %}" > 
+    <meta  name ="msapplication-TileColor"  content = "#ffffff" > 
+    <meta  name = "msapplication-TileImage"  content = "{% static 'images/icones/ms-icon-144x144.png' %}" > 
+    <meta  name = "theme-color"  content = "#ffffff" >
+    <!---icones-------------------------------------------------------------------------------------->
+  </head>
+  <body>
+
+    <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+    			<div class="col-lg-2 pr-4 align-items-center">
+  <a class="navbar-brand" href="{% url 'indexprojet' %}"><img class="navbar-brand"  src="{% static 'images/logo.png' %}"  /></a>
+	    		</div>
+	    		<div class="col-lg-10 d-none d-md-block">
+		    		<div class="row d-flex">
+			    		<div class="col-md-4 pr-4 d-flex topper align-items-center">
+			    			<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
+						    <span class="text">Adresse: 14 bis rue Mampouya patrice</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">Email: apptesteur242@gmail.com</span>
+						</div>
+
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">Téléphone: +242 06 615 64 94</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </nav>
+
+    {% block menu %}
+
+    {% endblock %}
+    <!-- END nav -->
+    
+    <!--------------------------Accueil----------------------------------->
+    {% block Accueil %}
+    {% endblock %}
+    <!--------------------------Fin acceuil---------------------------------->
+
+
+
+    <!--------------------------Service-------------------------------------->
+    {% block Services %}
+
+    {%  endblock %}
+  <!-----------------------------Fin service------------------------------------------------------>
+
+  <!-------------------------------Personnel---------------------------------------------------->
+  {% block Personnel %}
+
+    {% endblock %}
+<!---------------------------------------------------Fin Personnel--------------------------------->
+
+<!------------------------------------------------Apropos---------------------------------------------------------->
+{% block Apropos %}
+{% endblock %}
+<!------------------------------------------------------Apropos------------------------------------>
+
+<!-----------------------------------------------------COntact------------------------------------->
+{% block Contact %}
+{% endblock  %}
+<!------------------------------------------------FIn contact-------------------------------------->
+
+<!-----------------------------------------------------rdv------------------------------------->
+{% block rdv %}
+{% endblock  %}
+<!------------------------------------------------FIn contact-------------------------------------->
+
+<!-----------------------------------------------------qrcode------------------------------------->
+{% block qrcode %}
+{% endblock  %}
+<!------------------------------------------------fin qrcode-------------------------------------->
+
+
+		
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-5">
+              <h2 class="ftco-heading-2 logo"><a href="/admin/login" class="nav-link">Soleil <span>dev</span></a></h2>
+            </div>
+            <div class="ftco-footer-widget mb-5">
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Adresse: 14 bis rue Mampouya patrice</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+242 06 615 64 94</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text"> apptesteur242@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+
+	            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+         
+         
+          <div class="col-md">
+          	<div class="ftco-footer-widget mb-5">
+            	<h2 class="ftco-heading-2">Heures d'ouveture</h2>
+            	<h3 class="open-hours pl-4"><span class="ion-ios-time mr-3"></span>Nous sommes ouvert 24/24</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    
+  </body>
+</html>
+<ul>
+    <li><a href="{% url 'indexprojet' %}">Acceuil</a></li>
+    <li><a href="{% url 'apropos' %}">Apropos</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'indexservice' %}">Services</a></li>
+    <li><a href="{% url 'indexpersonnel' %}">Personnel soignant</a></li>
+    <li><a href="{% url 'rdv' %}">Prendre RDV</a></li>
+</ul>
+
+{% block msg %}
+{% endblock %}

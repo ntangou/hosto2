@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+
+{% block menu %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	<div class="container d-flex align-items-center">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="oi oi-menu"></span> Menu
+	    </button>
+	      <p class="button-custom order-lg-last mb-0"><a href="{% url 'rdv' %}" class="btn btn-secondary py-2 px-3">Prendre un rendez-vous</a></p>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+				<li class="nav-item "><a href="{% url 'indexprojet' %}" class="nav-link pl-0">Accueil</a></li>
+				<li class="nav-item"><a href="{% url 'indexservice' %}" class="nav-link"> nos Services</a></li>
+	        	<li class="nav-item"><a href="{% url 'indexpersonnel' %}" class="nav-link">Personnel soigant</a></li>
+	        	<li class="nav-item active"><a href="{% url 'apropos' %}" class="nav-link">à propos de l'hopital</a></li>
+                <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+    </nav>
+{% endblock%}
+
+{% block Apropos %}
+<section class="ftco-intro" style="background-image: url(/static/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+              <div class="col-md-9 ftco-animate text-center">
+                  <h1 class="mb-2 bread" style="color: #fff;" >Qui sommes-nous?</h1>
+              </div>
+          </div>
+  </div>
+</section>
+    <section class="ftco-section ftco-no-pt ftc-no-pb">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0" style="background-image: url(/static/images/apropos.jpg);">
+          </div>
+          <div class="col-md-7 wrap-about py-4 py-md-5 ftco-animate">
+            <div class="heading-section mb-5">
+              <div class="pl-md-5 ml-md-5">
+                <span class="subheading">Présentation</span>
+                <h2 class="mb-4" style="font-size: 28px;">L’Hôpital SoleilDev est un établissement du GROUPE Santé +.</h2>
+              </div>
+            </div>
+            <div class="pl-md-5 ml-md-5 mb-5">
+              <p>Avec plus de 18 000 salariés et 550 établissements et services, le GROUPE Santé + est l’une des premières entreprises sociales africaines. Depuis plus de 30 ans, Il met l'efficacité économique au service de l'intérêt général. Il répond ainsi aux enjeux de société de notre époque en développant des solutions innovantes dans ses 8 cœurs de métier : Jeunesse, Emploi, Solidarités, Santé, Seniors, Transition Ecologique, Action Internationale et Culture. Chaque année, les actions du GROUPE Santé + ont un impact sur plus de 1,7 million de personnes.</p>
+              <div class="row mt-5 pt-2">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ftco-intro" style="background-image: url('/static/images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+  
+      </div>
+    </section>
+    {% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+
+
+{% block menu %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container d-flex align-items-center">
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+    <p class="button-custom order-lg-last mb-0"><a href="{% url 'rdv' %}" class="btn btn-secondary py-2 px-3">Prendre un rendez-vous</a></p>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav mr-auto">
+       <li class="nav-item "><a href="{% url 'indexprojet' %}" class="nav-link pl-0">Accueil</a></li>
+       <li class="nav-item "><a href="{% url 'indexservice' %}" class="nav-link"> nos Services</a></li>
+       <li class="nav-item active"><a href="{% url 'indexpersonnel' %}" class="nav-link">Personnel soigant</a></li>
+	      <li class="nav-item"><a href="{% url 'apropos' %}" class="nav-link">à propos de l'hopital</a></li>
+         <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+      </ul>
+    </div> 
+  </div>
+</nav>
+{% endblock %}
+
+{% block Personnel %}
+
+<section class="ftco-intro" style="background-image: url(/static/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+              <div class="col-md-9 ftco-animate text-center">
+                  <h1 class="mb-2 bread" style="color: #fff;" >Personnel Soignant</h1>
+              </div>
+          </div>
+  </div>
+</section>
+
+
+  <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                    {% for personnel  in personnels %}
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                        
+                    <div class="staff">
+                        <div class="img-wrap d-flex align-items-stretch">
+                            <div class="img align-self-stretch" style="background-image: url('{{personnel.photo_personnel.url}}');"></div>
+                        </div>
+                        <div class="text pt-3 text-center">
+                            <h3>{{personnel.titre}}. {{personnel.prenom_personnel|title}} {{personnel.nom_personnel|upper}}</h3>
+                            {% if personnel.sexe == "M" %}
+                            <span class="position mb-2">{{personnel.service.specialisteM}}</span>
+                            {% else %}
+                            <span class="position mb-2">{{personnel.service.specialisteF}}</span>
+                            {% endif %}
+                            <span class="position mb-2">{{personnel.service}}</span>
+               
+                        </div>
+                    </div>
+                    
+                </div>
+                {% endfor %}
+                    </div>
+                </div>
+    </section>
+    {% endblock %}

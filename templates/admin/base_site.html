@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    Soleildev
+ {% endblock %}
+
+{% block extrahead %}
+ <link rel = 'stylesheet' href = "{% static 'css/admin.css' %}"> 
+ <link  rel = "icon"  type = "image/png"  tailles = "310x310"  href = "{% static 'images/icones/ms-icon-150x150.png' %}" > 
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">
+    <img src="{% static 'images/icones/logo5.png' %}" />
+</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+

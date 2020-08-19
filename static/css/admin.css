@@ -1,0 +1,107 @@
+#header { 
+    height: 120px; 
+    background: #fafafa; 
+    color: #000; 
+  } 
+
+#header a:link, #header a:visited { 
+    color:  #000; 
+} 
+
+#branding h1 { 
+    color: #000; 
+  }
+
+div.breadcrumbs{
+    background: #fff;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+}
+
+div.breadcrumbs a{
+    color: #000;
+}
+
+div.breadcrumbs a:hover{
+    color: #000;
+}
+
+.module h2, .module caption, .inline-group h2 { 
+    background: #fafafa;  
+    color: #000; 
+    height: 25px;
+    text-decoration: none;
+} 
+
+
+a.section:link { 
+    color: #000; 
+} 
+
+a.section:link, a.section:visited{
+    color: #000; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:link { 
+    color: #000; 
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:visited { 
+    color: #000; 
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.submit-row {
+    background: #fff; 
+}
+
+.button, input [type = submit], input [type = button], .submit-row input, a.button { 
+    background: #ccc;  
+    color: #000; 
+    border-radius: 14px; 
+}
+
+.button:hover, input [type = submit]:hover, input [type = button]:hover, input [type = button]:hover, .submit-row input:hover, a.button:hover { 
+    background: #fff; 
+    color: #000;
+  }
+
+.button.default, input [type = submit] .default, .submit-row input.default { 
+    background: #30caa0; 
+    color: #333; 
+  }
+
+.button.default:hover, input [type = submit] .default:hover, .submit-row input.default:hover { 
+    background: #ff8000; 
+    color: #000; 
+  }
+
+.button.default, input [type = submit] .default, .submit-row input.default{
+    background: #ff8500; 
+}
+
+
+thead th a:link, thead th a:visited {
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+h1 a img{
+    height:120px;
+    margin-top:-10px;
+}
+
+#nav-sidebar .current-app .section:link, #nav-sidebar .current-app .section:visited {
+    color: #333;
+    font-weight: bold;
+}
